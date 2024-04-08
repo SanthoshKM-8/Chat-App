@@ -1,0 +1,20 @@
+{{page-title "Home"}}
+{{!-- {{log this.model}} --}}
+<h2>Home</h2>
+{{#if this.isUserSelected}}
+  <div>
+    <p>Selected User: <b>{{this.userName}}</b></p>
+    <button {{on 'click' this.changeUser}}>Change User</button>
+  </div>
+{{else}}
+  <div>
+    <label for="user">Select User: </label>
+    <select name="user" id="user">
+      {{#each this.model as |user|}}
+        <option value={{user.id}}>{{user.name}}</option>
+      {{/each}}
+    </select>
+    <button {{on 'click' this.selectUser}}>Select</button>
+  </div>
+{{/if}}
+{{outlet}}

@@ -1,0 +1,111 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+body {
+  text-align: center;
+}
+
+.chat-view {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  gap: 10px;
+}
+
+.chats {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 234px;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+.chats div {
+  border-bottom: 2px solid black;
+}
+
+.chats div:last-child {
+  border-bottom: none;
+}
+
+.chats a {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.chat-box p {
+  margin: 0;
+}
+
+.name-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: rgb(204 201 201);
+  border-radius: 10px 10px 0 0;
+}
+
+.messages-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 300px;
+  overflow: scroll;
+}
+
+.message-input-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: rgb(204 201 201);
+  border-radius: 0 0 10px 10px;
+}
+
+.message-input-view input,
+.message-input-view button {
+  padding: 8px;
+}
+
+.message {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 230px;
+  margin: 2px 0;
+  position: relative;
+}
+
+.user-profile,
+.profile-edit {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  margin: auto;
+  padding: 10px;
+}
+
+img {
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.profile-edit div {
+  margin: 14px 0;
+}
+
+.chat-view .user-profile {
+  margin: 0;
+}

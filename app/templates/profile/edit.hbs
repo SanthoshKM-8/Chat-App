@@ -1,0 +1,19 @@
+{{page-title "Edit"}}
+<div class="profile-edit">
+  <img src={{this.user.profileImg}} alt='profile_img' width='50' height='50'/>
+  <div>
+    <label for='name'>Name: </label>
+    <Input id='name' @value={{this.user.name}}/>
+  </div>
+  <div>
+    <label for='mobileNo'>Mobile No: </label>
+    <Input id='mobileNo' @value={{this.user.mobileNo}}/>
+  </div>
+  <div>
+    <label for='emailId'>Email Id: </label>
+    <Input id='emailId' @value={{this.user.emailId}}/>
+  </div>
+  <button type="button" {{on 'click' this.updateProfile}}>Update</button>
+  <button type="button" {{on 'click' this.cancel}}>Cancel</button>
+</div>
+{{outlet}}

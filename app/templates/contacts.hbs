@@ -1,0 +1,14 @@
+{{page-title "Contacts"}}
+<h2>Contacts</h2>
+<div class="chat-view">
+  <div class="chats">
+    {{#each this.model as |contact|}}
+    <div>
+      <LinkTo @route='contacts.contact' @model={{contact.id}}>
+      <p>{{contact.name}}</p>
+      </LinkTo>
+    </div>
+    {{/each}}
+  </div>
+  {{outlet}}
+</div>

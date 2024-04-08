@@ -1,0 +1,36 @@
+{{page-title "Chat App"}}
+
+{{! The following component displays Ember's default welcome message. }}
+{{!-- <WelcomePage /> --}}
+{{! Feel free to remove this! }}
+
+<h1>Chat App</h1>
+{{!-- {{#unless this.isUserSelected}}
+<div>
+  <label for="user">Select User: </label>
+  <select name="user" id="user">
+    {{#each this.model as |user|}}
+    <option value={{user.id}}>{{user.name}}</option>
+    {{/each}}
+  </select>
+  <button type="button" {{on 'click' this.selectUser}}>Select</button>
+</div>
+{{else}}
+<div>
+  <p>Selected User: {{this.userName}}</p>
+  <button {{on 'click' this.changeUser}}>Change User</button>
+</div>
+{{/unless}} --}}
+
+{{!-- {{#if this.userAuthenticated}} --}}
+<LinkTo @route="home">Home</LinkTo>
+<LinkTo @route="chats">Chats</LinkTo>
+<LinkTo @route="contacts">Contacts</LinkTo>
+<LinkTo @route="profile">Profile</LinkTo>
+{{!-- {{else}}
+<LinkTo @route="home">Home</LinkTo>
+{{/if}} --}}
+<hr>
+
+
+{{outlet}}

@@ -1,0 +1,22 @@
+{{page-title "Chats"}}
+{{!-- {{log this.model}} --}}
+{{!-- {{log this.userId}} --}}
+<h2>Chats</h2>
+<div class="chat-view">
+  <div class="chats">
+    {{#each this.model as |chat|}}
+      <div>
+        <LinkTo @route='chats.chat' @model={{chat.id}}>
+        {{#if (eq this.userId chat.userId1)}}
+          <p>{{chat.userName2}}</p>
+        {{else}}
+          <p>{{chat.userName1}}</p>
+        {{/if}}
+        </LinkTo>
+      </div>
+    {{else}}
+      <p>Currently No Chats.</p>
+    {{/each}}
+  </div>
+  {{outlet}}
+</div>

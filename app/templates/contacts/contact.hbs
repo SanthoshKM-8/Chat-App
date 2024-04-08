@@ -1,0 +1,9 @@
+{{page-title "Contact"}}
+<div class="user-profile">
+  <img src={{this.model.profileImg}} alt="Profile Img" width="50" height="50" />
+  <p>Name: {{this.model.name}}</p>
+  <p>Mobile No: {{this.model.mobileNo}}</p>
+  <p>Email Id: {{this.model.emailId}}</p>
+  <button {{on 'click' this.chat}}>Chat with user</button>
+</div>
+{{outlet}}

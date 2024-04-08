@@ -1,0 +1,25 @@
+{{page-title "Chat"}}
+{{!-- {{log this.model}} --}}
+<div class="chat-box">
+  <div class="name-view">
+      <p>{{this.receiverName}}</p>
+  </div>
+  <div class="messages-view">
+    {{#each this.model.messages as |message|}}
+    <div class="message">
+      <div>
+        <p class="sender-name">{{message.senderName}}</p>
+        <p class="text">{{message.text}}</p>
+      </div>
+      <p class="time">{{message.time}}</p>
+    </div>
+    {{else}}
+    <p>Say hello to start your conversation.</p>
+    {{/each}}
+  </div>
+  <div class="message-input-view">
+    <Input @value={{this.text}} placeholder="Message"/>
+    <button type="button" {{on 'click' this.sendMessage}}>Send</button>
+  </div>
+</div>
+{{outlet}}

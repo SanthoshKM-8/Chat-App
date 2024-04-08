@@ -1,0 +1,10 @@
+{{page-title "Index"}}
+{{!-- {{log this.model}} --}}
+<div class="user-profile">
+  <img src={{this.model.profileImg}} alt='profile_img' width='50' height='50'/>
+  <p>Name: {{this.model.name}}</p>
+  <p>Mobile No: {{this.model.mobileNo}}</p>
+  <p>Email Id: {{this.model.emailId}}</p>
+  <button type="button" {{on 'click' this.editUser}}>Edit</button>
+</div>
+{{outlet}}
